@@ -4,6 +4,7 @@ let first = 0;
 let last = 0;
 let operator = '';
 let result = 0;
+let flag = 0;
 
 seven.addEventListener('click', () => push1(7) );
 four.addEventListener('click', () => push1(4) );
@@ -36,19 +37,20 @@ function push1(value)
     }
     if(topValue == 1)
     {
-        last = 0;
         if(value == ".")
             last=last + value;
         else
             last = last*10 + value;
         stack[topValue]= last;
         console.log(stack[topValue])
-        evaluate()
+        flag = 1;
     }
 }
 
 function push2(op)
 {
+    if(flag == 1)
+        evaluate()
     topValue = 1;
     operator = op;
     console.log(operator)
@@ -56,11 +58,39 @@ function push2(op)
 
 function evaluate()
 {
-    if(operator == "*")
+    if(operator == "%")
     {
-        result = first * last;
-        first = result;
+        result = first % last
+        first = result
+        last = 0
         console.log(first)
     }
-   
+    if(operator == "/")
+    {
+        result = first / last
+        first = result
+        last = 0
+        console.log(first)
+    }
+    if(operator == "*")
+    {
+        result = first * last
+        first = result
+        last = 0
+        console.log(first)
+    }
+    if(operator == "+")
+    {
+        result = first + last
+        first = result
+        last = 0
+        console.log(first)
+    }
+    if(operator == "-")
+    {
+        result = first - last;
+        first = result;
+        last = 0
+        console.log(first)
+    }
 }
