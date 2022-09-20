@@ -24,6 +24,8 @@ multiply.addEventListener('click', () =>  push2("*"));
 subtract.addEventListener('click', () => push2("-"));
 add.addEventListener('click', () => push2("+"));
 
+equals.addEventListener('click', () => push2("="));
+
 function push1(value)
 {
     if(topValue == 0)
@@ -54,6 +56,8 @@ function push2(op)
     topValue = 1;
     operator = op;
     console.log(operator)
+    if(operator == "=")
+        console.log(first)
 }
 
 function evaluate()
@@ -94,3 +98,4 @@ function evaluate()
         console.log(first)
     }
 }
+
