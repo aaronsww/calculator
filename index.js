@@ -26,6 +26,9 @@ add.addEventListener('click', () => push2("+"));
 
 equals.addEventListener('click', () => push2("="));
 
+const displayInput = document.querySelector('#displayInput');
+const content = document.createElement('div');
+
 function push1(value)
 {
     if(topValue == 0)
@@ -34,8 +37,9 @@ function push1(value)
             first=first + value;
         else
             first = first*10 + value;
-        stack[topValue]= first;
+        stack[0]= first;
         console.log(stack[topValue])
+        domAdd()
     }
     if(topValue == 1)
     {
@@ -43,8 +47,9 @@ function push1(value)
             last=last + value;
         else
             last = last*10 + value;
-        stack[topValue]= last;
+        stack[1]= last;
         console.log(stack[topValue])
+        domAdd2()
         flag = 1;
     }
 }
@@ -52,12 +57,26 @@ function push1(value)
 function push2(op)
 {
     if(flag == 1)
+    {
         evaluate()
+        domAdd()
+    }
     topValue = 1;
     operator = op;
     console.log(operator)
     if(operator == "=")
         console.log(first)
+}
+
+function domAdd()
+{
+    content.textContent = first
+    displayInput.appendChild(content);
+}
+function domAdd2()
+{
+    content.textContent = last
+    displayInput.appendChild(content);
 }
 
 function evaluate()
