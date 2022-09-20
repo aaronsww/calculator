@@ -1,0 +1,22 @@
+.body{
+    display: flex;
+    border: 2px solid;
+    width: 500px;
+    height: 500px;
+    flex-direction: column;
+}
+#display{
+    border: 2px solid;
+}
+.buttonCols{
+    display: flex;
+}
+#col1,#col2,#col3,#col4{
+    border: 2px solid;
+    margin: 20px;
+}
+
+#AC{
+    border: 2px solid;
+    margin: 20px;
+}
