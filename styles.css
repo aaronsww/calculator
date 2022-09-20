@@ -16,7 +16,24 @@
     margin: 20px;
 }
 
-#AC{
+#AC,#seven,#four,#one,#zero{
     border: 2px solid;
     margin: 20px;
+} 
+#clear,#eight,#five,#two,#decimal{
+    border: 2px solid;
+    margin: 20px;
+} 
+#reminder,#nine,#six,#three,#equals{
+    border: 2px solid;
+    margin: 20px;
+} 
+#divide,#multiply,#subtract{
+    border: 2px solid;
+    margin: 20px;
+} 
+#add{
+    border: 2px solid;
+    margin: 20px;
+    padding-top: 50px;
 }
