@@ -6,7 +6,7 @@
 .calcBody{
     display: flex;
     width: 350px;
-    height: 490px;
+    height: 520px;
     flex-direction: column;
     margin-left: 500px;
     padding: 15px;
@@ -38,6 +38,10 @@
     justify-content: center;
     margin-left: 5px;
 }
+#col4{
+    display: flex;
+    justify-content: space-between;
+}
 
 #seven,#four,#one,#zero,#eight,#five,#two,#nine,#six,#three,#reminder,#divide,#multiply,#subtract,#AC,#clear,#equals,#decimal,#add{
     display: inline-block;
@@ -53,6 +57,7 @@
     border-radius: 15px;
     box-shadow: 0 9px #999;
     margin: 8px;
+    font-family: 'Poppins', sans-serif;
 }
 #seven:hover,#four:hover,#one:hover,#zero:hover,#eight:hover,#five:hover,#two:hover,#nine:hover,#six:hover,#three:hover,
 #reminder:hover,#divide:hover,#multiply:hover,#subtract:hover,#AC:hover,#clear:hover,#equals:hover,#decimal:hover,#add:hover
@@ -66,7 +71,7 @@ transform: translateY(4px);
   }
 
 #add{
-padding-top: 80px;
+padding-top: 85px;
 background-color:  #ffb300;
 }   
 #reminder,#divide,#multiply,#subtract,#equals{
@@ -76,9 +81,9 @@ background-color:  #ffb300;
     background-color:#D8D8D7;
 }
 #AC{
-    padding: 17px 25px;
+    padding: 15px;
     width: 70px;
-    font-size: 17   px;
+    font-size: 20px;
 }
 #seven,#four,#one,#zero{
     width: 65px;
