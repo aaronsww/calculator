@@ -11,12 +11,11 @@
     margin-top: 80px;
     padding: 15px;
     padding-bottom: 20px ;
-    background-color: #1C1C1C; 
+    background-color: #2f3e46; 
     border-radius: 15px;
-    box-shadow: 10px 15px 18px #888888;
+    box-shadow: 10px 15px 18px #2d6a4f;
 }
 #display{
-    border: 2px #1C1C1C;
     display: flex;
     justify-content: flex-end;
     font-size: 70px;
@@ -26,7 +25,7 @@
    padding: 8px;
    border-radius: 10px;
    color: black;
-   background-color: #347788;
+   background-color: #0a9396;
    box-shadow: 0.5px 6px 11px 3px #004645 inset;
 }
 .buttonCols{
@@ -55,13 +54,11 @@
     background-color: #505050;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 9px #6c757d;
     margin: 8px;
     font-family: 'Poppins', sans-serif;
 }
-#seven:hover,#four:hover,#one:hover,#zero:hover,#eight:hover,#five:hover,#two:hover,#nine:hover,#six:hover,#three:hover,
-#reminder:hover,#divide:hover,#multiply:hover,#subtract:hover,#AC:hover,#clear:hover,#equals:hover,#decimal:hover,#add:hover
-{background-color: #3e8e41}
+ 
 
 #seven:hover,#four:hover,#one:hover,#zero:hover,#eight:hover,#five:hover,#two:hover,#nine:hover,#six:hover,#three:hover,
 #reminder:hover,#divide:hover,#multiply:hover,#subtract:hover,#AC:hover,#clear:hover,#equals:hover,#decimal:hover,#add:hover{
@@ -72,10 +69,10 @@ transform: translateY(4px);
 
 #add{
 padding-top: 85px;
-background-color:  #ffb703;
+background-color:  #ee9b00;
 }   
 #reminder,#divide,#multiply,#subtract,#equals{
-    background-color:  #ffb703;
+    background-color:  #ee9b00;
 }
 #AC,#clear{
     background-color:#D8D8D7;
@@ -90,8 +87,8 @@ background-color:  #ffb703;
     margin-left: 11px;
 }
 #reminder:hover,#divide:hover,#multiply:hover,#subtract:hover,#equals:hover,#decimal:hover,#add:hover{
-    background-color: #e7e8e9;
-    color: #ffb300;
+    background-color: #e9d8a6;
+    color: #ee9b00;
 }
 .cr{
     text-decoration: none; 
