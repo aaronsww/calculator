@@ -25,9 +25,12 @@ subtract.addEventListener('click', () => push2("-"));
 add.addEventListener('click', () => push2("+"));
 
 equals.addEventListener('click', () => push2("="));
+AC.addEventListener('click', () => location.reload());
 
 const displayInput = document.querySelector('#displayInput');
 const content = document.createElement('div');
+content.textContent = 0
+displayInput.appendChild(content)
 
 function push1(value)
 {
@@ -118,3 +121,4 @@ function evaluate()
     }
 }
 
+ 
