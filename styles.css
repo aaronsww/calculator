@@ -2,13 +2,13 @@
     font-family: 'digitalClock';
     src: url(digital-7/digital-7.ttf);
 }
-
 .calcBody{
     display: flex;
     width: 350px;
     height: 520px;
     flex-direction: column;
-    margin-left: 500px;
+    margin-left: 570px;
+    margin-top: 80px;
     padding: 15px;
     padding-bottom: 20px ;
     background-color: #1C1C1C; 
@@ -72,10 +72,10 @@ transform: translateY(4px);
 
 #add{
 padding-top: 85px;
-background-color:  #ffb300;
+background-color:  #ffb703;
 }   
 #reminder,#divide,#multiply,#subtract,#equals{
-    background-color:  #ffb300;
+    background-color:  #ffb703;
 }
 #AC,#clear{
     background-color:#D8D8D7;
@@ -92,4 +92,13 @@ background-color:  #ffb300;
 #reminder:hover,#divide:hover,#multiply:hover,#subtract:hover,#equals:hover,#decimal:hover,#add:hover{
     background-color: #e7e8e9;
     color: #ffb300;
+}
+.cr{
+    text-decoration: none; 
+    color: #1C1C1C;
+    font-size: 18px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
 }
