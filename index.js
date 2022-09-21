@@ -5,6 +5,7 @@ let last = 0;
 let operator = '';
 let result = 0;
 let flag = 0;
+let firstFlag = -1;
 
 seven.addEventListener('click', () => push1(7) );
 four.addEventListener('click', () => push1(4) );
@@ -18,13 +19,13 @@ nine.addEventListener('click', () => push1(9) );
 six.addEventListener('click', () => push1(6) );
 three.addEventListener('click', () => push1(3) );
 
-reminder.addEventListener('click', () => push2("%"));
-divide.addEventListener('click', () => push2("/"));
-multiply.addEventListener('click', () =>  push2("*"));
-subtract.addEventListener('click', () => push2("-"));
-add.addEventListener('click', () => push2("+"));
+reminder.addEventListener('click', () =>  {if(firstFlag == 0) push2("%")} );
+divide.addEventListener('click', () => {if(firstFlag == 0) push2("/")} );
+multiply.addEventListener('click', () =>  {if(firstFlag == 0) push2("*")} );
+subtract.addEventListener('click', () => {if(firstFlag == 0) push2("-")} );
+add.addEventListener('click', () => {if(firstFlag == 0) push2("+")} );
 
-equals.addEventListener('click', () => push2("="));
+equals.addEventListener('click', () => {if(flag == 1) push2("=")} );
 AC.addEventListener('click', () => location.reload());
 
 const displayInput = document.querySelector('#displayInput');
@@ -43,6 +44,7 @@ function push1(value)
         stack[0]= first;
         console.log(stack[topValue])
         domAdd()
+        firstFlag = 0;
     }
     if(topValue == 1)
     {
