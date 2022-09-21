@@ -5,8 +5,8 @@
     height: 450px;
     flex-direction: column;
     margin-left: 500px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+   padding: 15px;
+   padding-bottom: 20px ;
     background-color: #1C1C1C; 
 }
 #display{
@@ -15,8 +15,11 @@
     justify-content: flex-end;
     font-size: 40px;
     margin: 10px;
+    margin-bottom: 25px;
    padding: 8px;
    color: #fff;
+   background-color: #347788;
+   box-shadow: 0.5px 6px 11px 3px #004645 inset;
 }
 .buttonCols{
     display: flex;
@@ -50,17 +53,17 @@
 
 #seven:hover,#four:hover,#one:hover,#zero:hover,#eight:hover,#five:hover,#two:hover,#nine:hover,#six:hover,#three:hover,
 #reminder:hover,#divide:hover,#multiply:hover,#subtract:hover,#AC:hover,#clear:hover,#equals:hover,#decimal:hover,#add:hover{
-background-color: #3e8e41;
+background-color: #999;
 box-shadow: 0 5px #666;
 transform: translateY(4px);
   }
 
 #add{
 padding-top: 90px;
-background-color:  #FF9500;
+background-color:  #ffb300;
 }   
 #reminder,#divide,#multiply,#subtract,#equals{
-    background-color:  #FF9500;
+    background-color:  #ffb300;
 }
 #AC,#clear{
     background-color:#D8D8D7;
@@ -71,5 +74,10 @@ background-color:  #FF9500;
     font-size: 17   px;
 }
 #seven,#four,#one,#zero{
-    width: 70px;
+    width: 65px;
+    margin-left: 11px;
+}
+#reminder:hover,#divide:hover,#multiply:hover,#subtract:hover,#equals:hover,#decimal:hover,#add:hover{
+    background-color: #e7e8e9;
+    color: #ffb300;
 }
