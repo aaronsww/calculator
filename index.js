@@ -19,7 +19,7 @@ nine.addEventListener('click', () => push1(9) );
 six.addEventListener('click', () => push1(6) );
 three.addEventListener('click', () => push1(3) );
 
-reminder.addEventListener('click', () =>  {if(firstFlag > 0) push2("%")} );
+reminder.addEventListener('click', () =>  {if(firstFlag > 0) pushr()} );
 divide.addEventListener('click', () => {if(firstFlag > 0) push2("/")} );
 multiply.addEventListener('click', () =>  {if(firstFlag > 0) push2("*")} );
 subtract.addEventListener('click', () => {if(firstFlag > 0) push2("-")} );
@@ -73,11 +73,25 @@ function push2(op)
         console.log(first)
 }
 
+function pushr()
+{
+   first = first / 100
+   content.textContent = first
+   displayInput.appendChild(content);
+   topValue = 1;
+}
+
 function domAdd()
 {
-    first = Math.round(first * 10) / 10
-    content.textContent = first
-    displayInput.appendChild(content);
+    first = Math.round(first * 1000) / 1000 
+    if(first > 999999999){
+        content.textContent = "NaN"
+        displayInput.appendChild(content);
+    }
+    else{
+        content.textContent = first
+        displayInput.appendChild(content);
+    }
 }
 function domAdd2()
 {
@@ -87,13 +101,6 @@ function domAdd2()
 
 function evaluate()
 {
-    if(operator == "%")
-    {
-        result = first % last
-        first = result
-        last = 0
-        console.log(first)
-    }
     if(operator == "/")
     {
         result = first / last
