@@ -17,4 +17,4 @@ In this project, I made an on-screen calculator using JavaScript, HTML, and CSS.
 
 ### In Action
 
-<img src="images/calci" alt="">
+<img src="images/calci.png" alt="">
