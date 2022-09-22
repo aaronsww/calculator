@@ -5,7 +5,7 @@ let last = 0;
 let operator = '';
 let result = 0;
 let flag = 0;
-let firstFlag = -1;
+let firstFlag = 0;
 
 seven.addEventListener('click', () => push1(7) );
 four.addEventListener('click', () => push1(4) );
@@ -19,13 +19,13 @@ nine.addEventListener('click', () => push1(9) );
 six.addEventListener('click', () => push1(6) );
 three.addEventListener('click', () => push1(3) );
 
-reminder.addEventListener('click', () =>  {if(firstFlag == 0) push2("%")} );
-divide.addEventListener('click', () => {if(firstFlag == 0) push2("/")} );
-multiply.addEventListener('click', () =>  {if(firstFlag == 0) push2("*")} );
-subtract.addEventListener('click', () => {if(firstFlag == 0) push2("-")} );
-add.addEventListener('click', () => {if(firstFlag == 0) push2("+")} );
+reminder.addEventListener('click', () =>  {if(firstFlag > 0) push2("%")} );
+divide.addEventListener('click', () => {if(firstFlag > 0) push2("/")} );
+multiply.addEventListener('click', () =>  {if(firstFlag > 0) push2("*")} );
+subtract.addEventListener('click', () => {if(firstFlag > 0) push2("-")} );
+add.addEventListener('click', () => {if(firstFlag > 0) push2("+")} );
 
-equals.addEventListener('click', () => {if(flag == 1) push2("=")} );
+equals.addEventListener('click', () => {if(flag > 0) push2("=")} );
 AC.addEventListener('click', () => location.reload());
 
 const displayInput = document.querySelector('#displayInput');
@@ -35,7 +35,7 @@ displayInput.appendChild(content)
 
 function push1(value)
 {
-    if(topValue == 0)
+    if(topValue == 0 && firstFlag < 9)
     {
         if(value == ".")
             first=first + value;
@@ -44,9 +44,9 @@ function push1(value)
         stack[0]= first;
         console.log(stack[topValue])
         domAdd()
-        firstFlag = 0;
+        firstFlag++;
     }
-    if(topValue == 1)
+    if(topValue == 1 && flag < 9)
     {
         if(value == ".")
             last=last + value;
@@ -55,13 +55,13 @@ function push1(value)
         stack[1]= last;
         console.log(stack[topValue])
         domAdd2()
-        flag = 1;
+        flag++;
     }
 }
 
 function push2(op)
 {
-    if(flag == 1)
+    if(flag > 0)
     {
         evaluate()
         domAdd()
@@ -75,6 +75,7 @@ function push2(op)
 
 function domAdd()
 {
+    first = Math.round(first * 10) / 10
     content.textContent = first
     displayInput.appendChild(content);
 }
@@ -117,7 +118,7 @@ function evaluate()
     if(operator == "-")
     {
         result = first - last;
-        first = result;
+        first = result
         last = 0
         console.log(first)
     }
