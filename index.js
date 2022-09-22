@@ -14,7 +14,6 @@ zero.addEventListener('click', () => push1(0) );
 eight.addEventListener('click', () => push1(8) );
 five.addEventListener('click', () => push1(5) );
 two.addEventListener('click', () => push1(2) );
-decimal.addEventListener('click', () => push1(".") );
 nine.addEventListener('click', () => push1(9) );
 six.addEventListener('click', () => push1(6) );
 three.addEventListener('click', () => push1(3) );
@@ -27,6 +26,8 @@ add.addEventListener('click', () => {if(firstFlag > 0) push2("+")} );
 
 equals.addEventListener('click', () => {if(flag > 0) push2("=")} );
 AC.addEventListener('click', () => allClear());
+clear.addEventListener('click', () => allClear());
+decimal.addEventListener('click', () => allClear());
 
 const displayInput = document.querySelector('#displayInput');
 const content = document.createElement('div');
@@ -76,6 +77,7 @@ function push2(op)
 function pushr()
 {
    first = first / 100
+   first = Math.round(first * 1000) / 1000 
    content.textContent = first
    displayInput.appendChild(content);
    topValue = 1;
