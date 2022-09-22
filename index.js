@@ -26,7 +26,7 @@ subtract.addEventListener('click', () => {if(firstFlag > 0) push2("-")} );
 add.addEventListener('click', () => {if(firstFlag > 0) push2("+")} );
 
 equals.addEventListener('click', () => {if(flag > 0) push2("=")} );
-AC.addEventListener('click', () => location.reload());
+AC.addEventListener('click', () => allClear());
 
 const displayInput = document.querySelector('#displayInput');
 const content = document.createElement('div');
@@ -131,4 +131,15 @@ function evaluate()
     }
 }
 
- 
+ function allClear()
+ {
+    topValue = 0;
+    first = 0;
+    last = 0;
+    operator = '';
+    result = 0;
+    flag = 0;
+    firstFlag = 0;
+    content.textContent = first
+    displayInput.appendChild(content);
+ }
