@@ -108,38 +108,43 @@ function domAdd2()
     displayInput.appendChild(content);
 }
 
+//picks appropriate operation
 function evaluate()
 {
-    if(operator == "/")
-    {
-        result = first / last
-        first = result
-        last = 0
-        console.log(first)
-    }
-    if(operator == "*")
-    {
-        result = first * last
-        first = result
-        last = 0
-        console.log(first)
-    }
-    if(operator == "+")
-    {
-        result = first + last
-        first = result
-        last = 0
-        console.log(first)
-    }
-    if(operator == "-")
-    {
-        result = first - last;
-        first = result
-        last = 0
-        console.log(first)
+    switch(operator){
+        case  '/':
+        {
+            result = first / last
+            first = result
+            last = 0
+            console.log(first)
+            
+        }break
+        case  "*" :
+        {
+            result = first * last
+            first = result
+            last = 0
+            console.log(first)
+        }break
+        case "+" :
+        {
+            result = first + last
+            first = result
+            last = 0
+            console.log(first)
+        }break
+        case "-" :
+        {
+            result = first - last;
+            first = result
+            last = 0
+            console.log(first)
+        }break
     }
 }
 
+//AC button
  function allClear()
  {
     topValue = 0;
