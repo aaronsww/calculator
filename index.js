@@ -23,9 +23,10 @@ divide.addEventListener('click', () => {if(firstFlag > 0) push2("/")} );
 multiply.addEventListener('click', () =>  {if(firstFlag > 0) push2("*")} );
 subtract.addEventListener('click', () => {if(firstFlag > 0) push2("-")} );
 add.addEventListener('click', () => {if(firstFlag > 0) push2("+")} );
-
 equals.addEventListener('click', () => {if(flag > 0) push2("=")} );
 AC.addEventListener('click', () => allClear());
+
+//incomplete features
 clear.addEventListener('click', () => allClear());
 decimal.addEventListener('click', () => allClear());
 
@@ -34,6 +35,7 @@ const content = document.createElement('div');
 content.textContent = 0
 displayInput.appendChild(content)
 
+//to choose between first operand or second operand
 function push1(value)
 {
     if(topValue == 0 && firstFlag < 9)
@@ -60,6 +62,7 @@ function push1(value)
     }
 }
 
+//to take in the operation character  
 function push2(op)
 {
     if(flag > 0)
@@ -74,6 +77,7 @@ function push2(op)
         console.log(first)
 }
 
+//percentage operation
 function pushr()
 {
    first = first / 100
@@ -83,6 +87,7 @@ function pushr()
    topValue = 1;
 }
 
+//result will always be stored in "first" i.e first operand
 function domAdd()
 {
     first = Math.round(first * 1000) / 1000 
@@ -95,6 +100,8 @@ function domAdd()
         displayInput.appendChild(content);
     }
 }
+
+//to display second operand
 function domAdd2()
 {
     content.textContent = last
