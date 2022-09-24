@@ -25,9 +25,9 @@ subtract.addEventListener('click', () => {if(firstFlag > 0) push2("-")} );
 add.addEventListener('click', () => {if(firstFlag > 0) push2("+")} );
 equals.addEventListener('click', () => {if(flag > 0) push2("=")} );
 AC.addEventListener('click', () => allClear());
+clear.addEventListener('click', () => clearLatest());
 
 //incomplete features
-clear.addEventListener('click', () => allClear());
 decimal.addEventListener('click', () => allClear());
 
 const displayInput = document.querySelector('#displayInput');
@@ -77,6 +77,27 @@ function push2(op)
         console.log(first)
 }
 
+//clear 1 input
+function clearLatest()
+{
+    if(topValue == 0 && firstFlag < 9)
+    {
+        let cTemp = first - (first % 10)
+        first = cTemp / 10
+        console.log(first)
+        domAdd()
+        firstFlag--;
+    } 
+    if(topValue == 1 && flag < 9)
+    {
+        let cTemp = last - (last % 10)
+        last = cTemp / 10
+        console.log(last)
+        domAdd2()
+        flag--;
+    }
+}
+
 //percentage operation
 function pushr()
 {
@@ -91,7 +112,7 @@ function pushr()
 function domAdd()
 {
     first = Math.round(first * 1000) / 1000 
-    if(first > 999999999){
+    if(first > 99999999){
         content.textContent = "NaN"
         displayInput.appendChild(content);
     }
